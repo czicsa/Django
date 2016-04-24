@@ -13,12 +13,6 @@ def index(request):
     }
     return HttpResponse(template.render(context, request))
 
-def add_customer(request):
-    template = loader.get_template(TemplateKeys.add_customer)
-    context = {
-    }
-    return HttpResponse(template.render(context, request))
-
 def insert_customer(request):
     customer = Customer()
     customer.name = request.POST['name']

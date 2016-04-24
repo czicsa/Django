@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8caa64f7-dda5-4a5d-831a-ed71991032c7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/customerService/data_access/customer_data_access.py" afterPath="$PROJECT_DIR$/customerService/data_access/customer_data_access.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/customerService/templates/addcustomer.html" afterPath="$PROJECT_DIR$/customerService/templates/addcustomer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/customerService/templates/customers.html" afterPath="$PROJECT_DIR$/customerService/templates/customers.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/customerService/templates/header_footer.html" afterPath="$PROJECT_DIR$/customerService/templates/header_footer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/customerService/urls.py" afterPath="$PROJECT_DIR$/customerService/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/customerService/views.py" afterPath="$PROJECT_DIR$/customerService/views.py" />
     </list>
     <ignored path="casetteadmin.iws" />
@@ -40,20 +43,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/customerService/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-              <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.25671142" vertical-offset="0" max-vertical-offset="596">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customer_data_access.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="customer_data_access.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/customerService/data_access/customer_data_access.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2915952" vertical-offset="0" max-vertical-offset="583">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
               <caret line="10" column="109" selection-start-line="10" selection-start-column="109" selection-end-line="10" selection-end-column="109" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
@@ -65,8 +68,8 @@
       <file leaf-file-name="addcustomer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/customerService/templates/addcustomer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="527">
-              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+            <state vertical-scroll-proportion="-17.346153" vertical-offset="110" max-vertical-offset="680">
+              <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -75,8 +78,18 @@
       <file leaf-file-name="customers.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/customerService/templates/customers.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="561">
-              <caret line="20" column="78" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
+            <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="578">
+              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header_footer.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/customerService/templates/header_footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="476">
+              <caret line="2" column="67" selection-start-line="2" selection-start-column="67" selection-end-line="2" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -85,8 +98,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/customerService/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="289">
-              <caret line="10" column="89" selection-start-line="10" selection-start-column="89" selection-end-line="10" selection-end-column="89" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+              <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -120,17 +133,17 @@
         <option value="$PROJECT_DIR$/casetteadmin/templates/main.html" />
         <option value="$PROJECT_DIR$/customerService/templates/main.html" />
         <option value="$PROJECT_DIR$/casetteadmin/settings.py" />
-        <option value="$PROJECT_DIR$/customerService/templates/header_footer.html" />
         <option value="$PROJECT_DIR$/mediaService/templates/index.html" />
         <option value="$PROJECT_DIR$/casetteadmin/urls.py" />
         <option value="$PROJECT_DIR$/mediaService/urls.py" />
         <option value="$PROJECT_DIR$/mediaService/templates/stock.html" />
         <option value="$PROJECT_DIR$/mediaService/views.py" />
-        <option value="$PROJECT_DIR$/customerService/urls.py" />
+        <option value="$PROJECT_DIR$/customerService/data_access/customer_data_access.py" />
+        <option value="$PROJECT_DIR$/customerService/templates/header_footer.html" />
         <option value="$PROJECT_DIR$/customerService/templates/customers.html" />
         <option value="$PROJECT_DIR$/customerService/templates/addcustomer.html" />
+        <option value="$PROJECT_DIR$/customerService/urls.py" />
         <option value="$PROJECT_DIR$/customerService/views.py" />
-        <option value="$PROJECT_DIR$/customerService/data_access/customer_data_access.py" />
       </list>
     </option>
   </component>
@@ -735,13 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/customerService/templates/header_footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42728904" vertical-offset="0" max-vertical-offset="557">
-          <caret line="14" column="93" selection-start-line="14" selection-start-column="93" selection-end-line="14" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/casetteadmin/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.54362416" vertical-offset="1665" max-vertical-offset="2261">
@@ -795,47 +801,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/customerService/urls.py">
+    <entry file="file://$PROJECT_DIR$/customerService/data_access/customer_data_access.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <caret line="10" column="89" selection-start-line="10" selection-start-column="89" selection-end-line="10" selection-end-column="89" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <caret line="10" column="109" selection-start-line="10" selection-start-column="109" selection-end-line="10" selection-end-column="109" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customerService/templates/header_footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="476">
+          <caret line="2" column="67" selection-start-line="2" selection-start-column="67" selection-end-line="2" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/customerService/templates/customers.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="561">
-          <caret line="20" column="78" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="578">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/customerService/templates/addcustomer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="527">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        <state vertical-scroll-proportion="-17.346153" vertical-offset="110" max-vertical-offset="680">
+          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customerService/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/customerService/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.25671142" vertical-offset="0" max-vertical-offset="596">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/customerService/data_access/customer_data_access.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2915952" vertical-offset="0" max-vertical-offset="583">
-          <caret line="10" column="109" selection-start-line="10" selection-start-column="109" selection-end-line="10" selection-end-column="109" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

@@ -1,8 +1,9 @@
 {% extends "header_footer.html" %}
 {% block content %}
+{% include "addcustomer.html" %}
 <div class="container">
     <div class="panel panel-default">
-        <div class="panel-heading">Ügyfelek<a href="{% url 'customer:newcustomer' %}" class="pull-right"><span class="glyphicon glyphicon-plus"></span></a></div>
+        <div class="panel-heading">Ügyfelek<a data-toggle="modal" href="#addCustomer" class="pull-right"><span class="glyphicon glyphicon-plus"></span></a></div>
         <table class="table table-striped">
             <thead>
                     <tr>
