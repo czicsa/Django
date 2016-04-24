@@ -8,6 +8,7 @@ class Media(models.Model):
     purchase_date = models.DateField()
     media_type = models.ForeignKey(Types.Type, related_name="media_type")
     status_type = models.ForeignKey(Types.Type, related_name="media_status_type")
+    is_deleted = models.BooleanField(default=False)
 
     def __str__(self):
         return self.media_title

@@ -1,9 +1,25 @@
 {% extends "header_footer.html" %}
 {% block content %}
-<h1>Készlet</h1>
-<ul>
-{% for media in media_list %}
-    <li>{{ media.media_title }}</li>
-{% endfor %}
-</ul>
+{% include "addmedia.html" %}
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">Készlet<a data-toggle="modal" href="#addMedia" class="pull-right"><span class="glyphicon glyphicon-plus"></span></a></div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for media in media_list %}
+                <tr>
+                    <td>{{ media.media_title }}</td>
+                    <td><a href="{% url 'media:deletemedia' media.id %}"><span class="glyphicon glyphicon-trash"></span></a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 {% endblock %}
