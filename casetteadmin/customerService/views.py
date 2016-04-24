@@ -28,3 +28,8 @@ def insert_customer(request):
     customer.address = request.POST['address']
     DataAccess.insert_customer(customer)
     return HttpResponseRedirect(reverse('customer:index'))
+
+def delete_customer(request, customer_id):
+    customer = DataAccess.get_customer_by_id(customer_id)
+    DataAccess.delete_customer(customer)
+    return HttpResponseRedirect(reverse('customer:index'))

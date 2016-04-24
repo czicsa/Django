@@ -1,10 +1,28 @@
 {% extends "header_footer.html" %}
 {% block content %}
-<h1>Ügyfelek</h1>
-<a href="{% url 'customer:newcustomer' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-<ul>
-{% for customer in customer_list %}
-    <li>{{ customer.name }}</li>
-{% endfor %}
-</ul>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">Ügyfelek<a href="{% url 'customer:newcustomer' %}" class="pull-right"><span class="glyphicon glyphicon-plus"></span></a></div>
+        <table class="table table-striped">
+            <thead>
+                    <tr>
+                    <th>Név</th>
+                    <th>Azonosító</th>
+                    <th>Telefonszám</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for customer in customer_list %}
+                <tr>
+                    <td>{{ customer.name }}</td>
+                    <td>{{ customer.customer_identifier }}</td>
+                    <td>{{ customer.phone_number }}</td>
+                    <td><a href="{% url 'customer:deletecustomer' customer.id %}"><span class="glyphicon glyphicon-trash"></span></a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 {% endblock %}

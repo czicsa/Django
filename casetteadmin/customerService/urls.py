@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^newcustomer$', views.add_customer, name='newcustomer'),
     url(r'^insertcustomer$', views.insert_customer, name='insertcustomer'),
+    url(r'^deletecustomer/(?P<customer_id>[0-9]+)/$', views.delete_customer, name='deletecustomer'),
 ]
