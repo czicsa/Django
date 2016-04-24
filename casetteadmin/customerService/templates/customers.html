@@ -1,0 +1,10 @@
+{% extends "header_footer.html" %}
+{% block content %}
+<h1>Ügyfelek</h1>
+<a href="{% url 'customer:newcustomer' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+<ul>
+{% for customer in customer_list %}
+    <li>{{ customer.name }}</li>
+{% endfor %}
+</ul>
+{% endblock %}

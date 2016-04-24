@@ -1,0 +1,9 @@
+{% extends "header_footer.html" %}
+{% block content %}
+<h1>Készlet</h1>
+<ul>
+{% for media in media_list %}
+    <li>{{ media.media_title }}</li>
+{% endfor %}
+</ul>
+{% endblock %}
