@@ -22,7 +22,6 @@ def add_customer(request):
 def insert_customer(request):
     customer = Customer()
     customer.name = request.POST['name']
-    customer.customer_identifier = 'sasd'
     customer.phone_number = request.POST['phone']
     customer.personal_identifier = request.POST['pid']
     customer.address = request.POST['address']
