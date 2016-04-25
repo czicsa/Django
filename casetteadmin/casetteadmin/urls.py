@@ -24,4 +24,4 @@ urlpatterns = [
     #customerService
     url(r'^customer/', include('customerService.urls')),
     url(r'^stock/', include('mediaService.urls')),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,5 +1,7 @@
+{% load static %}
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/custom.css' %}">
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
@@ -13,11 +15,17 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="{% ifequal request.path '/rent/'%}active{% endifequal%}"><a href="/rent/">Kölcsönzés</a></li>
-        <li class="{% ifequal request.path '/customer/'%}active{% endifequal%}"><a href="/customer/">Ügyfelek</a></li>
+        <li class="{% if request.path == '/customer/' or request.path == '/customer/searchcustomer'%}active{% endif%}"><a href="/customer/">Ügyfelek</a></li>
         <li class="{% ifequal request.path '/stock/'%}active{% endifequal%}"><a href="/stock/">Készlet</a></li>
       </ul>
     </div>
   </div>
 </nav>
 {% block content %}{% endblock %}
-footer
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            Czinke Csaba | Copyright 2016
+        </div>
+    </div>
+</footer>

@@ -1,15 +1,20 @@
 {% extends "header_footer.html" %}
 {% block content %}
 {% include "addcustomer.html" %}
+{% include "searchcustomer.html" %}
 <div class="container">
     <div class="panel panel-default">
-        <div class="panel-heading">Ügyfelek<a data-toggle="modal" href="#addCustomer" class="pull-right"><span class="glyphicon glyphicon-plus"></span></a></div>
+        <div class="panel-heading">Ügyfelek
+            <a data-toggle="modal" href="#addCustomer" class="btn btn-default pull-right"><span class="glyphicon glyphicon-plus"></span></a>
+            <a data-toggle="modal" href="#searchCustomer" class="btn btn-default pull-right"><span class="glyphicon glyphicon-search"></span></a>
+        </div>
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Név</th>
                     <th>Azonosító</th>
-                    <th>Telefonszám</th>
+                    <th>Személyi szám</th>
+                    <th></th>
                     <th></th>
                 </tr>
             </thead>
@@ -18,7 +23,8 @@
                 <tr>
                     <td>{{ customer.name }}</td>
                     <td>{{ customer.customer_identifier }}</td>
-                    <td>{{ customer.phone_number }}</td>
+                    <td>{{ customer.personal_identifier }}</td>
+                    <td><a href="{% url 'customer:editcustomer' customer.id %}"><span class="glyphicon glyphicon-pencil"></span></a></td>
                     <td><a href="{% url 'customer:deletecustomer' customer.id %}"><span class="glyphicon glyphicon-trash"></span></a></td>
                 </tr>
             {% endfor %}

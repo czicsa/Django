@@ -10,6 +10,9 @@ def get_media_by_id(media_id):
 def insert_media(media):
     media.save()
 
+def update_media(media):
+    media.save()
+
 def delete_media(media):
     media.is_deleted = True
     media.save()

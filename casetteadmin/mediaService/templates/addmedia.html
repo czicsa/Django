@@ -14,7 +14,31 @@
                         <label for="media_title">Név</label>
                         <input type="text" name="media_title" id="media_title" class="form-control"/>
                     </div>
-                    <button type="submit" class="btn btn-default">Hozzáad</button>
+                    <div class="form-group">
+                        <label for="purchase_date">Beszerzés dátuma</label>
+                        <input type="date" name="purchase_date" id="purchase_date" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="media_seq">Sorszám</label>
+                        <input type="text" name="media_seq" id="media_seq" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="media_type">Típus</label>
+                        <select class="form-control" name="media_type" id="media_type">
+                            {% for media_type in media_type_list %}
+                                  <option {} value="{{ media_type.id }}">{{ media_type.description}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="status_type">Típus</label>
+                        <select class="form-control" name="status_type" id="status_type">
+                            {% for media_status_type in media_status_type_list %}
+                                  <option value="{{ media_status_type.id }}">{{ media_status_type.description}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk"></span> Mentés</button>
                 </form>
             </div>
         </div>

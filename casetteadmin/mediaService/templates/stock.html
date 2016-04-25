@@ -3,11 +3,18 @@
 {% include "addmedia.html" %}
 <div class="container">
     <div class="panel panel-default">
-        <div class="panel-heading">Készlet<a data-toggle="modal" href="#addMedia" class="pull-right"><span class="glyphicon glyphicon-plus"></span></a></div>
+        <div class="panel-heading">Készlet
+            <a data-toggle="modal" href="#addMedia" class="btn btn-default pull-right"><span class="glyphicon glyphicon-plus"></span></a>
+        </div>
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Név</th>
+                    <th>Beszerzés dátuma</th>
+                    <th>Sorszám</th>
+                    <th>Típus</th>
+                    <th>Státusz</th>
+                    <th></th>
                     <th></th>
                 </tr>
             </thead>
@@ -15,6 +22,11 @@
             {% for media in media_list %}
                 <tr>
                     <td>{{ media.media_title }}</td>
+                    <td>{{ media.purchase_date | date:"Y.m.d." }}</td>
+                    <td>{{ media.seq }}</td>
+                    <td>{{ media.media_type }}</td>
+                    <td>{{ media.status_type }}</td>
+                    <td><a href="{% url 'media:editmedia' media.id %}"><span class="glyphicon glyphicon-pencil"></span></a></td>
                     <td><a href="{% url 'media:deletemedia' media.id %}"><span class="glyphicon glyphicon-trash"></span></a></td>
                 </tr>
             {% endfor %}

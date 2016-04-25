@@ -22,6 +22,34 @@ def insert_customer(request):
     DataAccess.insert_customer(customer)
     return HttpResponseRedirect(reverse('customer:index'))
 
+def edit_customer(request, customer_id):
+    template = loader.get_template(TemplateKeys.edit_customer)
+    context = {
+        'customer': DataAccess.get_customer_by_id(customer_id),
+    }
+    return HttpResponse(template.render(context, request))
+
+def update_customer(request, customer_id):
+    customer = DataAccess.get_customer_by_id(customer_id)
+    customer.name = request.POST['name']
+    customer.phone_number = request.POST['phone']
+    customer.personal_identifier = request.POST['pid']
+    customer.address = request.POST['address']
+    DataAccess.update_customer(customer)
+    return HttpResponseRedirect(reverse('customer:index'))
+
+def search_customer(request):
+    name = request.POST['name']
+    customer_identifier = request.POST['customer_identifier']
+    personal_identifier = request.POST['pid']
+    result = DataAccess.get_customer_by_name_and_customer_identifier_and_personal_identifier(name,customer_identifier, personal_identifier)
+
+    template = loader.get_template(TemplateKeys.all_customer)
+    context = {
+        'customer_list': result,
+    }
+    return HttpResponse(template.render(context, request))
+
 def delete_customer(request, customer_id):
     customer = DataAccess.get_customer_by_id(customer_id)
     DataAccess.delete_customer(customer)

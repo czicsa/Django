@@ -1,7 +1,7 @@
 from django.db import models
 
 class Category(models.Model):
-    resource_key = models.CharField(max_length=200)
+    resource_key = models.CharField(max_length=200, unique=True)
     description = models.CharField(max_length=200)
 
     def __str__(self):
@@ -9,7 +9,7 @@ class Category(models.Model):
 
 class Type(models.Model):
     category = models.ForeignKey(Category, related_name="category")
-    resource_key = models.CharField(max_length=200)
+    resource_key = models.CharField(max_length=200, unique=True)
     description = models.CharField(max_length=200)
 
     def __str__(self):
