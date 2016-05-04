@@ -23,5 +23,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     #customerService
     url(r'^customer/', include('customerService.urls')),
+    #mediaService
     url(r'^stock/', include('mediaService.urls')),
+    #rentService
+    url(r'^rent/', include('rentService.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
