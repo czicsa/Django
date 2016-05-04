@@ -1,0 +1,33 @@
+{% block content %}
+
+<div id="makeRent" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Kölcsönzési művelet</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Kölcsönzött kazetták száma</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for customer in customer_list %}
+                <tr>
+                    <td>{{ customer.name }}</td>
+                    <td>{{ customer.medias.count }}</td>
+                    <td><a href="{% url 'customer:customerdatasheet' customer.id %}"><span class="glyphicon glyphicon-pencil"></span></a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

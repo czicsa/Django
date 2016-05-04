@@ -1,0 +1,42 @@
+{% extends "header_footer.html" %}
+{% block content %}
+<div class="container">
+    <div class="row"><h1>Adatlap</h1></div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h4>Név: <span class="label label-success">{{customer.name}}</span></h4>
+            <h4>Azonosító: <span class="label label-success">{{customer.customer_identifier}}</span></h4>
+            <h4>Telefonszám: <span class="label label-success">{{customer.phone_number}}</span></h4>
+            <h4>Személyi igazolvány száma: <span class="label label-success">{{customer.personal_identifier}}</span></h4>
+            <h4>Cím: <span class="label label-success">{{customer.address}}</span></h4>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">Kikölcsönzött médiák
+            <a data-toggle="modal" href="#makeRent" class="btn btn-default pull-right"><span class="glyphicon glyphicon-plus"></span></a>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Név</th>
+                    <th>Beszerzés dátuma</th>
+                    <th>Sorszám</th>
+                    <th>Típus</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for media in customer.medias.all %}
+                <tr>
+                    <td>{{ media.media_title }}</td>
+                    <td>{{ media.purchase_date | date:"Y.m.d." }}</td>
+                    <td>{{ media.seq }}</td>
+                    <td>{{ media.media_type }}</td>
+                    <td><a href="{% url 'customer:unrentmedia' customer.id media.id %}"><span class="glyphicon glyphicon-share-alt"></span></a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

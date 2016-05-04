@@ -11,4 +11,6 @@ urlpatterns = [
     url(r'^updatecustomer/(?P<customer_id>[0-9]+)/$', views.update_customer, name='updatecustomer'),
     url(r'^searchcustomer$', views.search_customer, name='searchcustomer'),
     url(r'^deletecustomer/(?P<customer_id>[0-9]+)/$', views.delete_customer, name='deletecustomer'),
+    url(r'^customerdatasheet/(?P<customer_id>[0-9]+)/$', views.customer_sheet, name='customerdatasheet'),
+    url(r'^unrentmedia/(?P<customer_id>[0-9]+)/(?P<media_id>[0-9]+)/$', views.unrent_media, name='unrentmedia'),
 ]

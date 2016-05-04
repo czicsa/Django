@@ -54,3 +54,18 @@ def delete_customer(request, customer_id):
     customer = DataAccess.get_customer_by_id(customer_id)
     DataAccess.delete_customer(customer)
     return HttpResponseRedirect(reverse('customer:index'))
+
+def customer_sheet(request, customer_id):
+    customer = DataAccess.get_customer_by_id(customer_id)
+    template = loader.get_template(TemplateKeys.customer_data_sheet)
+    context = {
+        'customer': customer,
+    }
+    return HttpResponse(template.render(context, request))
+
+def unrent_media(request, customer_id, media_id):
+    customer = DataAccess.get_customer_by_id(customer_id)
+    media = customer.medias.get(id=media_id)
+    customer.medias.remove(media)
+    template = loader.get_template(TemplateKeys.customer_data_sheet)
+    return HttpResponseRedirect(reverse('customer:customerdatasheet', kwargs={'customer_id':customer_id}))

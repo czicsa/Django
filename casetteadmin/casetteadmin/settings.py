@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'mediaService.apps.MediaserviceConfig',
     'typeService.apps.TypeserviceConfig',
     'customerService.apps.CustomerserviceConfig',
+    'rentService.apps.RentserviceConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
