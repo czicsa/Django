@@ -14,9 +14,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="{% ifequal request.path '/rent/'%}active{% endifequal%}"><a href="/rent/">Kölcsönzés</a></li>
-        <li class="{% if request.path == '/customer/' or request.path == '/customer/searchcustomer'%}active{% endif%}"><a href="/customer/">Ügyfelek</a></li>
-        <li class="{% ifequal request.path '/stock/'%}active{% endifequal%}"><a href="/stock/">Készlet</a></li>
+        <li class="{% if request.path == '/rent/all/' or request.path == '/rent/over/'%}active{% endif%}"><a href="/rent/all/">Kölcsönzés</a></li>
+        <li class="{% if request.path == '/customer/' or request.path == '/customer/searchcustomer' or '/customer/customerdatasheet/' in request.path%}active{% endif%}"><a href="/customer/">Ügyfelek</a></li>
+        <li class="{% if request.path == '/stock/'  or '/stock/mediadatasheet/' in request.path%}active{% endif%}"><a href="/stock/">Készlet</a></li>
       </ul>
     </div>
   </div>

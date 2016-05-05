@@ -15,16 +15,14 @@
                     <th>Azonosító</th>
                     <th>Személyi szám</th>
                     <th></th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>
             {% for customer in customer_list %}
-                <tr>
+                <tr ondblclick="document.location = '{% url 'customer:customerdatasheet' customer.id %}'">
                     <td>{{ customer.name }}</td>
                     <td>{{ customer.customer_identifier }}</td>
                     <td>{{ customer.personal_identifier }}</td>
-                    <td><a href="{% url 'customer:editcustomer' customer.id %}"><span class="glyphicon glyphicon-pencil"></span></a></td>
                     <td><a href="{% url 'customer:deletecustomer' customer.id %}"><span class="glyphicon glyphicon-trash"></span></a></td>
                 </tr>
             {% endfor %}

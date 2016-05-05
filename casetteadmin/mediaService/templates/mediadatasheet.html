@@ -1,0 +1,22 @@
+{% extends "header_footer.html" %}
+{% block content %}
+<div class="container">
+    <div class="row"><h1>Adatlap</h1></div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <a {% if media.customer != None %}
+                    href="{% url 'customer:unrentmedia' media.customer.id media.id 'media'%}"
+               {% else %}
+                    disabled
+               {%endif %} title="Kölcsönzés vége" class="btn btn-default pull-right"><span class="glyphicon glyphicon-share-alt"></span></a>
+            <a href="{% url 'media:editmedia' media.id %}" title="Média szerkesztése" class="btn btn-default pull-right"><span class="glyphicon glyphicon-pencil"></span></a>
+            <h4>Név: <span class="label label-success">{{ media.media_title }}</span></h4>
+            <h4>Beszerzés dátuma: <span class="label label-success">{{ media.purchase_date | date:"Y.m.d." }}</span></h4>
+            <h4>Kölcsönzés dátuma: <span class="label label-success">{{ media.rented_date | date:"Y.m.d." }}</span></h4>
+            <h4>Sorszám: <span class="label label-success">{{ media.seq }}</span></h4>
+            <h4>Típus: <span class="label label-success">{{ media.media_type }}</span></h4>
+            <h4>Státusz: <span class="label label-success">{{ media.status_type }}</span></h4>
+        </div>
+    </div>
+</div>
+{% endblock %}

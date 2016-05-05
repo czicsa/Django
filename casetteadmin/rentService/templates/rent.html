@@ -1,33 +1,32 @@
 {% extends "header_footer.html" %}
 {% block content %}
-{% include "makerent.html" %}
 <div class="container">
+    <div class="btn-group" role="group">
+        <a href="/rent/all/" class="btn btn-default {% if request.path == '/rent/all/' %}active{% else %}{% endif %}">Összes</a>
+        <a href="/rent/over/" class="btn btn-default {% if request.path == '/rent/over/' %}active{% else %}{% endif %}">Határidőn túl</a>
+    </div>
     <div class="panel panel-default">
-        <div class="panel-heading">Kölcsönzött médiák
-            <a data-toggle="modal" href="#makeRent" class="btn btn-default pull-right"><span class="glyphicon glyphicon-plus"></span></a>
-        </div>
+        <div class="panel-heading">Kölcsönzött médiák</div>
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Név</th>
-                    <th>Beszerzés dátuma</th>
+                    <th>Kölcsönzés dátuma</th>
                     <th>Sorszám</th>
                     <th>Típus</th>
                     <th>Státusz</th>
                     <th>Kölcsönző</th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>
             {% for media in media_list %}
-                <tr>
+                <tr ondblclick="document.location = '{% url 'media:mediadatasheet' media.id %}'">
                     <td>{{ media.media_title }}</td>
-                    <td>{{ media.purchase_date | date:"Y.m.d." }}</td>
+                    <td>{{ media.rented_date | date:"Y.m.d." }}</td>
                     <td>{{ media.seq }}</td>
                     <td>{{ media.media_type }}</td>
                     <td>{{ media.status_type }}</td>
                     <td>{{ media.customer }}</td>
-                    <td><a href="{% url 'media:deletemedia' media.id %}"><span class="glyphicon glyphicon-trash"></span></a></td>
                 </tr>
             {% endfor %}
             </tbody>

@@ -1,9 +1,11 @@
 {% extends "header_footer.html" %}
 {% block content %}
+{% include "rentmedia.html" %}
 <div class="container">
     <div class="row"><h1>Adatlap</h1></div>
     <div class="panel panel-default">
         <div class="panel-body">
+            <a href="{% url 'customer:editcustomer' customer.id %}" class="btn btn-default pull-right"><span class="glyphicon glyphicon-pencil"></span></a>
             <h4>Név: <span class="label label-success">{{customer.name}}</span></h4>
             <h4>Azonosító: <span class="label label-success">{{customer.customer_identifier}}</span></h4>
             <h4>Telefonszám: <span class="label label-success">{{customer.phone_number}}</span></h4>
@@ -13,13 +15,14 @@
     </div>
     <div class="panel panel-default">
         <div class="panel-heading">Kikölcsönzött médiák
-            <a data-toggle="modal" href="#makeRent" class="btn btn-default pull-right"><span class="glyphicon glyphicon-plus"></span></a>
+            <a data-toggle="modal" {% if rentable_media.count == 0 %}disabled{% else %}href="#rentMedia"{% endif %} class="btn btn-default pull-right"><span class="glyphicon glyphicon-plus"></span></a>
         </div>
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Név</th>
                     <th>Beszerzés dátuma</th>
+                    <th>Kölcsönzés dátuma</th>
                     <th>Sorszám</th>
                     <th>Típus</th>
                     <th></th>
@@ -27,12 +30,13 @@
             </thead>
             <tbody>
             {% for media in customer.medias.all %}
-                <tr>
+                <tr ondblclick="document.location = '{% url 'media:mediadatasheet' media.id %}'">
                     <td>{{ media.media_title }}</td>
                     <td>{{ media.purchase_date | date:"Y.m.d." }}</td>
+                    <td>{{ media.rented_date | date:"Y.m.d." }}</td>
                     <td>{{ media.seq }}</td>
                     <td>{{ media.media_type }}</td>
-                    <td><a href="{% url 'customer:unrentmedia' customer.id media.id %}"><span class="glyphicon glyphicon-share-alt"></span></a></td>
+                    <td><a href="{% url 'customer:unrentmedia' customer.id media.id 'customer'%}"><span class="glyphicon glyphicon-share-alt"></span></a></td>
                 </tr>
             {% endfor %}
             </tbody>

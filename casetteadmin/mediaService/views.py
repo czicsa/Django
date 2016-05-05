@@ -5,6 +5,7 @@ from django.core.urlresolvers import reverse
 from mediaService.models import Media
 from mediaService.data_access import media_data_access as DataAccess
 from typeService.data_access import data_access as TypeDataAccess, category_keys as CategoryKeys
+from typeService.data_access import type_keys as TypeKeys
 import mediaService.templates.template_keys as TemplateKeys
 
 def index(request):
@@ -42,6 +43,8 @@ def update_media(request, media_id):
     media.seq = request.POST['media_seq']
     media.media_type = TypeDataAccess.get_type_by_id(request.POST['media_type'])
     media.status_type = TypeDataAccess.get_type_by_id(request.POST['status_type'])
+    if media.status_type != TypeDataAccess.get_type_by_resource_key(TypeKeys.rented):
+        media.customer = None
     DataAccess.update_media(media)
     template = loader.get_template(TemplateKeys.all_media)
     return HttpResponseRedirect(reverse('media:index'))
@@ -51,3 +54,12 @@ def delete_media(request, media_id):
     media = DataAccess.get_media_by_id(media_id)
     DataAccess.delete_media(media)
     return HttpResponseRedirect(reverse('media:index'))
+
+def media_sheet(request, media_id):
+    media = DataAccess.get_media_by_id(media_id)
+    template = loader.get_template(TemplateKeys.media_data_sheet)
+    context = {
+        'media': media,
+    }
+    return HttpResponse(template.render(context, request))
+

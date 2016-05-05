@@ -1,0 +1,27 @@
+{% block content %}
+
+<div id="rentMedia" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Média kölcsönzés</h4>
+            </div>
+            <div class="modal-body">
+              <form action="{% url 'customer:rentmedia' customer.id %}" method="post" role="form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="media">Média</label>
+                        <select name="media" id="media" class="form-control">
+                        {% for media in rentable_media %}
+                          <option value="{{ media.id }}">{{ media.media_title }} | {{ media.seq }}</option>
+                        {% endfor %}
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-floppy-disk"></span> Mentés</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
