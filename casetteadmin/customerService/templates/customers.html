@@ -5,7 +5,7 @@
 <div class="container">
     <div class="panel panel-default">
         <div class="panel-heading">Ügyfelek
-            <a data-toggle="modal" href="#addCustomer" class="btn btn-default pull-right"><span class="glyphicon glyphicon-plus"></span></a>
+            <a id="add_customer" data-toggle="modal" href="#addCustomer" class="btn btn-default pull-right"><span class="glyphicon glyphicon-plus"></span></a>
             <a data-toggle="modal" href="#searchCustomer" class="btn btn-default pull-right"><span class="glyphicon glyphicon-search"></span></a>
         </div>
         <table class="table table-striped">
@@ -23,7 +23,7 @@
                     <td>{{ customer.name }}</td>
                     <td>{{ customer.customer_identifier }}</td>
                     <td>{{ customer.personal_identifier }}</td>
-                    <td><a href="{% url 'customer:deletecustomer' customer.id %}"><span class="glyphicon glyphicon-trash"></span></a></td>
+                    <td><a id="delete_customer_{{customer.id}}" href="{% url 'customer:deletecustomer' customer.id %}"><span class="glyphicon glyphicon-trash"></span></a></td>
                 </tr>
             {% endfor %}
             </tbody>
