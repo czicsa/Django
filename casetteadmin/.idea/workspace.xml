@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8caa64f7-dda5-4a5d-831a-ed71991032c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/customerService/tests/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/customerService/tests/gui/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/customerService/tests/unit_and_functional/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/customerService/tests/gui/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/customerService/tests/unit_and_functional/tests.py" />
-      <change type="DELETED" beforePath="D:\Egyetem\Integrációs\Beadandó\django\Django\casetteadmin\customerService\tests.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/customerService/templates/addcustomer.html" afterPath="$PROJECT_DIR$/customerService/templates/addcustomer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/customerService/templates/customers.html" afterPath="$PROJECT_DIR$/customerService/templates/customers.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/customerService/templates/header_footer.html" afterPath="$PROJECT_DIR$/customerService/templates/header_footer.html" />
     </list>
     <ignored path="casetteadmin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="tests.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/customerService/tests/unit_and_functional/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65008575" vertical-offset="318" max-vertical-offset="901">
+            <state vertical-scroll-proportion="0.0" vertical-offset="318" max-vertical-offset="901">
               <caret line="41" column="88" selection-start-line="41" selection-start-column="88" selection-end-line="41" selection-end-column="88" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
@@ -58,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header_footer.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="header_footer.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/customerService/templates/header_footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="612">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.8168761" vertical-offset="123" max-vertical-offset="697">
+              <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -183,7 +175,6 @@
         <option value="$PROJECT_DIR$/rentService/urls.py" />
         <option value="$PROJECT_DIR$/rentService/templates/rent.html" />
         <option value="$PROJECT_DIR$/rentService/views.py" />
-        <option value="$PROJECT_DIR$/customerService/templates/header_footer.html" />
         <option value="$PROJECT_DIR$/mediaService/templates/mediadatasheet.html" />
         <option value="$PROJECT_DIR$/customerService/urls.py" />
         <option value="$PROJECT_DIR$/customerService/views.py" />
@@ -197,6 +188,7 @@
         <option value="$PROJECT_DIR$/customerService/tests/gui/__init__.py" />
         <option value="$PROJECT_DIR$/customerService/tests/gui/tests.py" />
         <option value="$PROJECT_DIR$/customerService/tests/unit_and_functional/tests.py" />
+        <option value="$PROJECT_DIR$/customerService/templates/header_footer.html" />
       </list>
     </option>
   </component>
@@ -529,8 +521,8 @@
     <configuration />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -937,14 +929,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/customerService/templates/header_footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="612">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/customerService/tests/gui/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
@@ -957,11 +941,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/customerService/tests/unit_and_functional/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65008575" vertical-offset="318" max-vertical-offset="901">
+        <state vertical-scroll-proportion="0.0" vertical-offset="318" max-vertical-offset="901">
           <caret line="41" column="88" selection-start-line="41" selection-start-column="88" selection-end-line="41" selection-end-column="88" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customerService/templates/header_footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8168761" vertical-offset="123" max-vertical-offset="697">
+          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
